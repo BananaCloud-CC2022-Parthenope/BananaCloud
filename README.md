@@ -203,10 +203,9 @@ Now you should be monitoring all the metrics of the running function on the Clus
 
 To easily see the responses of the function, we made a simple Flask based web application. To run it go to the WebApp folder in another shell and, after installing [Flask](https://flask.palletsprojects.com/en/2.1.x/installation/) set the following environment variables.
 
-*  ```sh
+* Set these environment variables
+  ```sh
   export FLASK_APP=server
-   ```
-*  ```sh
   export FLASK_ENV=deployment
    ```
    
