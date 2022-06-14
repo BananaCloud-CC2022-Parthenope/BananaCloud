@@ -221,7 +221,7 @@ To check the state of the function we to monitor some metrics using Prometheus a
 
 * In this page there is a text field "Grafana.com Dashboard" paste there this link https://grafana.com/grafana/dashboards/3434 to attach Grafana to the Prometheus metrics
 
-* After Loading, in the "faas" field of the next window use the "faas" attribute.
+* After clicking Loading, in the "faas" field of the next window use the "faas" attribute.
 
 Now you should be monitoring all the metrics of the running function on the Cluster.
 
