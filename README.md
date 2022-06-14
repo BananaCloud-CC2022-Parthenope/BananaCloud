@@ -1,4 +1,3 @@
-# BananaCloud
 <div id="top"></div>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -16,7 +15,7 @@
     <img src="images/bnbncl.jpeg" alt="Logo" >
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Banana Cloud</h3>
 
   <p align="center">
     project_description
