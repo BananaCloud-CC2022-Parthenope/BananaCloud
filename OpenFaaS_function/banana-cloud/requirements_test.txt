@@ -1,3 +1,0 @@
-tox==3.*
-flake8
-pytest
