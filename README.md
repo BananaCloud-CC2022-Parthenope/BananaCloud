@@ -63,7 +63,7 @@ We deployed our function on a Cloud machine provided by the italian "Gestione Am
 To learn more about the project see the [Project Report](BananaCloud_Report.pdf)
 
 <div align="center">
-    <img src="images/banana_cloud_demo.gif" alt="screen" width="700px" height="500px">
+    <img src="images/demo_bnc.gif" alt="screen" width="700px" height="500px">
  </div>
 
 
