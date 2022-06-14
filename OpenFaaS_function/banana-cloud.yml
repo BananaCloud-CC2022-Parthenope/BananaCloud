@@ -1,0 +1,18 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: #INSERT YOUR GATEWAY URL HERE
+functions:
+  banana-cloud:
+    lang: pydatascience-web
+    handler: ./banana-cloud
+    image: <docker_account>/banana-cloud:latest
+    environment:
+      RAW_BODY: True
+      write_timeout: 30s
+      read_timeout: 30s
+      exec_timeout: 600s
+    labels:
+     com.openfaas.scale.min: 1
+     com.openfaas.scale.max: 10
+     com.openfaas.scale.zero: "true"
