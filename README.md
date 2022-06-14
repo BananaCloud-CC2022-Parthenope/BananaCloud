@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/BananaCloud-CC2022-Parthenope/BananaCloud">
-    <img src="images/bnbncl.jpeg" alt="Logo" >
+    <img src="images/bn_logo.png" alt="Logo" >
   </a>
 
 <h3 align="center">Banana Cloud</h3>
