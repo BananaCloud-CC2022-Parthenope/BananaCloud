@@ -8,10 +8,19 @@
         <img src="https://img.shields.io/badge/Python-3.8-007d9c?logo=python"/>
     </a>
       <a href="https://www.openfaas.com">
-        <img src="https://img.shields.io/badge/OpenFaaS-serverless-blue.svg"/>
+        <img src="https://img.shields.io/badge/OpenFaaS-serverless-blue.svg">
     </a>
       <a href="https://www.openfaas.com">
-        <img src="https://img.shields.io/badge/Pytorch-1.10.0-orange?logo=pytorch&logoColor=red"/>
+        <img src="https://img.shields.io/badge/Pytorch-1.10.0-orange?logo=pytorch&logoColor=red">
+    </a>
+          <a href="https://docs.docker.com/">
+        <img src="https://img.shields.io/badge/Docker-20.10.16-blue.svg">
+    </a>
+        <a href="https://https://flask.palletsprojects.com/en/2.1.x/">
+        <img src="https://img.shields.io/badge/Flask-2.1.2-yellow.svg">
+    </a>
+        <a href="https://kubernetes.io/">
+        <img src="https://img.shields.io/badge/Kubernetes-k3s-blue.svg">
     </a>
     <a href="https://github.com/BananaCloud-CC2022-Parthenope/BananaCloud">
         <img src="https://img.shields.io/badge/Contributors-3-blue" alt="Contributors"/>
