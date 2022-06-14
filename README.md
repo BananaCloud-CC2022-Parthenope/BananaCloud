@@ -1,5 +1,23 @@
-<div id="top"></div>
-
+<div id="top">
+  
+<div align="center">
+  <a href="https://wfxr.mit-license.org/2017">
+        <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg"/>
+    </a>
+    <a href="https://www.python.org/downloads/release/python-380/">
+        <img src="https://img.shields.io/badge/Python-3.8-007d9c?logo=python"/>
+    </a>
+      <a href="https://www.openfaas.com">
+        <img src="https://img.shields.io/badge/OpenFaaS-serverless-blue.svg"/>
+    </a>
+      <a href="https://www.openfaas.com">
+        <img src="https://img.shields.io/badge/Pytorch-1.10.0-orange?logo=pytorch&logoColor=red"/>
+    </a>
+    <a href="https://github.com/BananaCloud-CC2022-Parthenope/BananaCloud">
+        <img src="https://img.shields.io/badge/Contributors-3-blue" alt="Contributors"/>
+    </a>
+  </div>
+</div>
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -58,12 +76,17 @@
 
 In this work we took a pre-trained Convolutional Neural Network model that classifies the ripeness state of bananas and we made it serverless as a Function-as-a-Service using OpenFaas. In doing so we gained some advantages: the images to classify aren't saved locally on disk, but only kept in memory as we have defined the function handler that only takes images in a HTTP request.
 
-We deployed our function on a Cloud machine provided by the italian "Gestione Ampliamento Rete Ricerca" (GARR) institute. 
+We deployed our function on a Cloud machine provided by the italian "Gestione Ampliamento Rete Ricerca" (GARR) institute,and to invoke it we set up a small Flask webApp, in which clients make a request to the service by sending images through a browser, after which the webserver will forward the request to the instance on the GARR, as shown in the following figure: 
+<div align="center">
+    <img src="images/comunications.jpg" alt="screen">
+</div>
+
 
 To learn more about the project see the [Project Report](BananaCloud_Report.pdf)
 
+An example of use:
 <div align="center">
-    <img src="images/demo_bnc.gif" alt="screen" width="700px" height="500px">
+    <img src="images/demo_bnc.gif" alt="screen" >
  </div>
 
 
