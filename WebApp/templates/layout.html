@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <meta name="description" content={{description}}>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAOPwAADL1gA0e5kAANrmACBeeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiIiIAAAAAAiIiIiAAAAAiRERERAAAAiQREREREAACRBREREERACJBFAAARDMAJBFAAAAEMwAkFAAAAAAAACQUAAAAAAAAAkAAAAAAAAACQAAAAAAAAAUwAAAAAAAABTAAAAAAAAD//wAA//8AAP//AADwPwAA4B8AAMAPAACABwAAgAMAAAPDAAAH4wAAD/8AAA//AACf/wAAn/8AAJ//AACf/wAA" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/text.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container">
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
+        {% include 'form.html' %}
+    </div>
+  </body>
+
+</html>
