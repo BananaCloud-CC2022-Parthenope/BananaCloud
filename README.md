@@ -186,15 +186,37 @@ To check the state of the function we to monitor some metrics using Prometheus a
   kubectl port-forward -n openfaas svc/grafana 3000:3000 &
    ```
 * Go to the Grafana dashboard visiting http://localhost:3000 usr/pswd are admin/admin and then Dashboard->Import
+
 * In this page there is a text field "Grafana.com Dashboard" paste there this link https://grafana.com/grafana/dashboards/3434 to attach Grafana to the Prometheus metrics
 
 * After Loading, in the "faas" field of the next window use the "faas" attribute.
 
 Now you should be monitoring all the metrics of the running function on the Cluster.
 
+<div align="center">
+    <img src="images/grafana.PNG" alt="screen">
+ </div>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Web App
+
+To easily see the responses of the function, we made a simple Flask based web application. To run it go to the WebApp folder in another shell and, after installing [Flask](https://flask.palletsprojects.com/en/2.1.x/installation/) set the following environment variables.
+
+* ```sh
+  export FLASK_APP=server
+   ```
+* ```sh
+  export FLASK_ENV=deployment
+   ```
+   
+* In the server.py file of the WebApp don't forget to place "http://YOUR_CLUSTER_IP:PORT/function/banana-cloud" in the url variable
+
+* Run the flask app with
+```sh
+  flask run
+   ```
+* Now you should visit http://localhost:5000 in your browser to load bananas images and send requests to the function !
 
 <!-- CONTRIBUTING -->
 ## Contributing
