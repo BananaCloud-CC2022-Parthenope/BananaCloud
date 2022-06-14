@@ -112,39 +112,39 @@ To make the project work not locally you have to provide the [WebApp](WebApp/ser
 Note that the username is the one on our machine, and the key.pem file is the key to access our cluster via ssh. Use the one you need.
 
 * Check if all went well using the following commands
- ```sh
+  ```sh
   export KUBECONFIG=/home/enzo/kubeconfig
   kubectl config set-context linode-openfaas
   kubectl get nodes -o wide
    ```
 * Install OpenFaas using arkade
-```sh
+  ```sh
   arkade install openfaas
    ```
 * Check if openfaas was successfully installed
-```sh
+  ```sh
   kubectl get deploy --namespace openfaas
    ```
 * Forward all requests made to http://localhost:8080 to the pod running the gateway service.
-```sh
+  ```sh
   kubectl port-forward -n openfaas svc/gateway 8080:8080 &
-  ```
+   ```
 
 ### Creation and Configuration of the function
 
 * Clone the repository
-   ```sh
+  ```sh
    git clone https://github.com/BananaCloud-CC2022-Parthenope/BananaCloud.git
    ```
 * Move to the OpenFaaS_function folder
 * Edit the banana-cloud.yml updating the "<docker_account>" line in the image field with your DockerHub username
 * Build the function
-   ```sh
+  ```sh
     faas-cli build -f banana-cloud.yml
    ```
 * Login to your docker account in the shell
 * Push the builded image to DockerHub
-```sh
+  ```sh
     faas-cli push -f banana-cloud.yml
    ```
 * Deploy the DockerHub image to the cluster
@@ -170,19 +170,19 @@ To check the state of the function we to monitor some metrics using Prometheus a
    kubectl expose deployment prometheus -n openfaas --type=NodePort --name=prometheus-ui
    ```
 * Forward all the requests made to http://localhost:9090 to the pod running the prometheus-ui service:
- ```sh
+  ```sh
   kubectl port-forward -n openfaas svc/prometheus-ui 9090:9090 &
    ```
 * To execute Grafana, install this image
- ```sh
+  ```sh
   kubectl run grafana -n openfaas --image=stefanprodan/faas-grafana:4.6.3 --port=3000
    ```
 * Expose Grafana Pod, making it an active service
- ```sh
+  ```sh
   kubectl expose pods grafana -n openfaas --type=NodePort --name=grafana
    ```
 * Forward all the requests made to http://localhost:3000 to the pod running the grafana service:
-```sh
+  ```sh
   kubectl port-forward -n openfaas svc/grafana 3000:3000 &
    ```
 * Go to the Grafana dashboard visiting http://localhost:3000 usr/pswd are admin/admin and then Dashboard->Import
@@ -203,17 +203,17 @@ Now you should be monitoring all the metrics of the running function on the Clus
 
 To easily see the responses of the function, we made a simple Flask based web application. To run it go to the WebApp folder in another shell and, after installing [Flask](https://flask.palletsprojects.com/en/2.1.x/installation/) set the following environment variables.
 
-* ```sh
+*  ```sh
   export FLASK_APP=server
    ```
-* ```sh
+*  ```sh
   export FLASK_ENV=deployment
    ```
    
 * In the server.py file of the WebApp don't forget to place "http://YOUR_CLUSTER_IP:PORT/function/banana-cloud" in the url variable
 
 * Run the flask app with
-```sh
+  ```sh
   flask run
    ```
 * Now you should visit http://localhost:5000 in your browser to load bananas images and send requests to the function !
