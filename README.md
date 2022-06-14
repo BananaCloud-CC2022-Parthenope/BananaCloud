@@ -1,12 +1,4 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -64,13 +56,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+In this work we took a pre-trained Convolutional Neural Network model that classifies the ripeness state of bananas and we made it serverless as a Function-as-a-Service using OpenFaas. In doing so we gained some advantages: the images to classify aren't saved locally on disk, but only kept in memory as we have defined the function handler that only takes images in a HTTP request.
+
+We deployed our function on a Cloud machine provided by the italian "Gestione Ampliamento Rete Ricerca" (GARR) institute. 
+
+To learn more about the project see the [Project Report]()
 
 <div align="center">
     <img src="images/screen_bn.PNG" alt="screen" width="700px" height="500px">
  </div>
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -177,7 +172,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+## Contacts
 
 Antonio Di Marino - University of Naples Parthenope - [email](antonio.dimarino001@studenti.uniparthenope.it) - [LinkedIn](https://www.linkedin.com/in/antonio-di-marino/)
 
@@ -185,23 +180,17 @@ Vincenzo Bevilacqua - University of Naples Parthenope - [email](vincenzo.bevilac
 
 MicheleZito - University of Naples Parthenope - [email](michele.zito001@studenti.uniparthenope.it)
 
-<!-- Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
--->
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* We thank the italian "Gestione Ampliamento Rete Ricerca" (GARR) institute for letting us use one of their machines as a cluster for this project - [Learn More](https://cloud.garr.it/)
+* We thank the italian "Gestione Ampliamento Rete Ricerca" (GARR) institute for letting us use one of their Cloud machines as a cluster for this project - [Learn More](https://cloud.garr.it/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links 
 [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
 [contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
@@ -215,3 +204,4 @@ MicheleZito - University of Naples Parthenope - [email](michele.zito001@studenti
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
+-->
