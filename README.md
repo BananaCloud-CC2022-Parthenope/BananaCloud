@@ -76,7 +76,7 @@
 
 In this work we took a pre-trained Convolutional Neural Network model that classifies the ripeness state of bananas and we made it serverless as a Function-as-a-Service using OpenFaas. In doing so we gained some advantages: the images to classify aren't saved locally on disk, but only kept in memory as we have defined the function handler that only takes images in a HTTP request.
 
-We deployed our function on a Cloud machine provided by the italian "Gestione Ampliamento Rete Ricerca" (GARR) institute,and to invoke it we set up a small Flask webApp, in which clients make a request to the service by sending images through a browser, after which the webserver will forward the request to the instance on the GARR, as shown in the following figure: 
+We deployed our function on a Cloud machine provided by the italian "Gestione Ampliamento Rete Ricerca" (GARR) institute, and to invoke it we set up a small Flask webApp, in which clients make a request to the service by sending images through a browser, after which the webserver will forward the request to the instance on the GARR, as shown in the following figure: 
 <div align="center">
     <img src="images/comunications.jpg" alt="screen">
 </div>
