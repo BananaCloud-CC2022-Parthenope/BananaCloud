@@ -74,14 +74,13 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [OpenFaas](https://www.openfaas.com/)
+* [k3sup](https://github.com/alexellis/k3sup)
+* [Kubernetes](https://kubernetes.io/)
+* [Docker](https://www.docker.com/)
+* [Grafana](https://grafana.com/)
+* [YOLOV5](https://github.com/ultralytics/yolov5)
+* [Pytorch](https://pytorch.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
