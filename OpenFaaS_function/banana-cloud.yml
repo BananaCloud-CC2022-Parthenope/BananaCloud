@@ -1,7 +1,7 @@
 version: 1.0
 provider:
   name: openfaas
-  gateway: #INSERT YOUR GATEWAY URL HERE
+  gateway:  http://127.0.0.1:8080
 functions:
   banana-cloud:
     lang: pydatascience-web
