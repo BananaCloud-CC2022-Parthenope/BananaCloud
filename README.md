@@ -60,11 +60,12 @@ In this work we took a pre-trained Convolutional Neural Network model that class
 
 We deployed our function on a Cloud machine provided by the italian "Gestione Ampliamento Rete Ricerca" (GARR) institute. 
 
-To learn more about the project see the [Project Report]()
+To learn more about the project see the [Project Report](BananaCloud_Report.pdf)
 
 <div align="center">
     <img src="images/screen_bn.PNG" alt="screen" width="700px" height="500px">
  </div>
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -88,10 +89,14 @@ To learn more about the project see the [Project Report]()
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Before starting, keep in mind that the model provided hasn't the weigths files, so if you want to use our model, you have to train it from scratch.
+
+To make the project work not locally you have to provide the [WebApp](WebApp/server.py) the url where the serverless function is running and waiting for HTTP requests.
+
 
 ### Prerequisites
+
+
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
