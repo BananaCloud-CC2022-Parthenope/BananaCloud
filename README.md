@@ -43,10 +43,10 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <!--li><a href="#roadmap">Roadmap</a></li-->
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact">Contacts</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -109,7 +109,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/BananaCloud-CC2022-Parthenope/BananaCloud.git
    ```
 3. Install NPM packages
    ```sh
@@ -135,7 +135,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
-<!-- ROADMAP -->
+<!-- ROADMAP
 ## Roadmap
 
 - [ ] Feature 1
@@ -147,7 +147,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
+ -->
 
 <!-- CONTRIBUTING -->
 ## Contributing
