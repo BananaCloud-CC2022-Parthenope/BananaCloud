@@ -39,14 +39,14 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#creation-and-configuration-of-the-function">Creation and Configuration of the function</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <!--li><a href="#roadmap">Roadmap</a></li-->
+    <li><a href="#metrics">Metrics</a></li>
+    <li><a href="#web-app">Web App</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contacts</a></li>
+    <li><a href="#contacts">Contacts</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -63,7 +63,7 @@ We deployed our function on a Cloud machine provided by the italian "Gestione Am
 To learn more about the project see the [Project Report](BananaCloud_Report.pdf)
 
 <div align="center">
-    <img src="images/screen_bn.PNG" alt="screen" width="700px" height="500px">
+    <img src="images/banana_cloud_demo.gif" alt="screen" width="700px" height="500px">
  </div>
 
 
@@ -96,58 +96,105 @@ To make the project work not locally you have to provide the [WebApp](WebApp/ser
 
 ### Prerequisites
 
-
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+* Install [Docker](https://docs.docker.com/engine/install/ubuntu/)
+* Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+* Install [k3sup](https://github.com/alexellis/k3sup) ver. 0.11.3
+* Install the [faas-cli](https://docs.openfaas.com/cli/install/)
+* Use [arkade](https://github.com/alexellis/arkade) to install all the above
+* Set this environment variable, we'll need it for the next commands
   ```sh
-  npm install npm@latest -g
+   export IP="YOUR CLUSTER'S PUBLIC IP"
+   ```
+* using k3sup install k3s on the cluster, using the IP we've set before
+  ```sh
+   k3sup install --ip $IP --user ubuntu --ssh-key $HOME/key.pem
+   ```
+Note that the username is the one on our machine, and the key.pem file is the key to access our cluster via ssh. Use the one you need.
+
+* Check if all went well using the following commands
+ ```sh
+  export KUBECONFIG=/home/enzo/kubeconfig
+  kubectl config set-context linode-openfaas
+  kubectl get nodes -o wide
+   ```
+* Install OpenFaas using arkade
+```sh
+  arkade install openfaas
+   ```
+* Check if openfaas was successfully installed
+```sh
+  kubectl get deploy --namespace openfaas
+   ```
+* Forward all requests made to http://localhost:8080 to the pod running the gateway service.
+```sh
+  kubectl port-forward -n openfaas svc/gateway 8080:8080 &
   ```
 
-### Installation
+### Creation and Configuration of the function
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+* Clone the repository
    ```sh
    git clone https://github.com/BananaCloud-CC2022-Parthenope/BananaCloud.git
    ```
-3. Install NPM packages
+* Move to the OpenFaaS_function folder
+* Edit the banana-cloud.yml updating the "<docker_account>" line in the image field with your DockerHub username
+* Build the function
    ```sh
-   npm install
+    faas-cli build -f banana-cloud.yml
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+* Login to your docker account in the shell
+* Push the builded image to DockerHub
+```sh
+    faas-cli push -f banana-cloud.yml
    ```
+* Deploy the DockerHub image to the cluster
+  ```sh
+   faas-cli deploy -f banana-cloud.yml
+   ```
+* To make the function accessible 
+  ```sh
+   export OPENFAAS_URL=http://YOUR_CLUSTER_IP:PORT
+   ```
+Now the function is runnin and you can send the image you want to classify via an HTTP request to http://YOUR_CLUSTER_IP:PORT/function/banana-cloud 
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+## Metrics
 
-<!-- USAGE EXAMPLES -->
-## Usage
+To check the state of the function we to monitor some metrics using Prometheus and Grafana.
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+* Expose the OpenFaas service Prometheus
+  ```sh
+   kubectl expose deployment prometheus -n openfaas --type=NodePort --name=prometheus-ui
+   ```
+* Forward all the requests made to http://localhost:9090 to the pod running the prometheus-ui service:
+ ```sh
+  kubectl port-forward -n openfaas svc/prometheus-ui 9090:9090 &
+   ```
+* To execute Grafana, install this image
+ ```sh
+  kubectl run grafana -n openfaas --image=stefanprodan/faas-grafana:4.6.3 --port=3000
+   ```
+* Expose Grafana Pod, making it an active service
+ ```sh
+  kubectl expose pods grafana -n openfaas --type=NodePort --name=grafana
+   ```
+* Forward all the requests made to http://localhost:3000 to the pod running the grafana service:
+```sh
+  kubectl port-forward -n openfaas svc/grafana 3000:3000 &
+   ```
+* Go to the Grafana dashboard visiting http://localhost:3000 usr/pswd are admin/admin and then Dashboard->Import
+* In this page there is a text field "Grafana.com Dashboard" paste there this link https://grafana.com/grafana/dashboards/3434 to attach Grafana to the Prometheus metrics
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+* After Loading, in the "faas" field of the next window use the "faas" attribute.
+
+Now you should be monitoring all the metrics of the running function on the Cluster.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- ROADMAP
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
- -->
+## Web App
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -173,8 +220,6 @@ Don't forget to give the project a star! Thanks again!
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contacts
