@@ -18,7 +18,7 @@
 <h3 align="center">Banana Cloud</h3>
 
   <p align="center">
-    project_description
+    your project descriptio here
     <br />
     <a href="https://github.com/BananaCloud-CC2022-Parthenope/BananaCloud"><strong>Explore the docs »</strong></a>
     <br />
