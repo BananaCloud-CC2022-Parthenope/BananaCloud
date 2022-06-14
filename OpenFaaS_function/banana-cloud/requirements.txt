@@ -1,0 +1,16 @@
+albumentations
+captum
+colorama
+jpeg
+ffmpeg-python
+imageio
+matplotlib
+numpy
+pandas
+pillow
+scikit-learn
+scipy
+tensorboard
+tensorboardx
+seaborn
+tqdm
