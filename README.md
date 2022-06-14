@@ -250,7 +250,7 @@ Antonio Di Marino - University of Naples Parthenope - [email](antonio.dimarino00
 
 Vincenzo Bevilacqua - University of Naples Parthenope - [email](vincenzo.bevilacqua001@studenti.uniparthenope.it)
 
-MicheleZito - University of Naples Parthenope - [email](michele.zito001@studenti.uniparthenope.it)
+Michele Zito - University of Naples Parthenope - [email](michele.zito001@studenti.uniparthenope.it)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
