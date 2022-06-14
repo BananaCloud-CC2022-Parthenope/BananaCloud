@@ -18,12 +18,12 @@
 <h3 align="center">Banana Cloud</h3>
 
   <p align="center">
-    your project descriptio here
+    This repository is about our project, deploying a Deep Learning Model for the classification of ripeness state of bananas
+    as a Function-as-a-Service using OpenFaas. Keep reading to find out how to do it. 
     <br />
     <a href="https://github.com/BananaCloud-CC2022-Parthenope/BananaCloud"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/BananaCloud-CC2022-Parthenope/BananaCloud">View Demo</a>
     ·
     <a href="https://github.com/BananaCloud-CC2022-Parthenope/BananaCloud/issues">Report Bug</a>
     ·
@@ -64,7 +64,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+
+<div align="center">
+    <img src="images/screen_bn.PNG" alt="screen" width="700px" height="500px">
+ </div>
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
@@ -175,20 +179,22 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Antonio Di Marino - University of Naples Parthenope - [email](antonio.dimarino001@studenti.uniparthenope.it) - [LinkedIn](https://www.linkedin.com/in/antonio-di-marino/)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Vincenzo Bevilacqua - University of Naples Parthenope - [email](vincenzo.bevilacqua001@studenti.uniparthenope.it)
+
+MicheleZito - University of Naples Parthenope - [email](michele.zito001@studenti.uniparthenope.it)
+
+<!-- Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
+-->
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* We thank the italian "Gestione Ampliamento Rete Ricerca" (GARR) institute for letting us use one of their machines as a cluster for this project - [Learn More](https://cloud.garr.it/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
