@@ -295,6 +295,7 @@ Vincenzo Bevilacqua - University of Naples Parthenope - [email](vincenzo.bevilac
 Michele Zito - University of Naples Parthenope - [email](michele.zito001@studenti.uniparthenope.it)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
