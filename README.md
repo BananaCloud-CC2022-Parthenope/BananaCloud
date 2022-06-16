@@ -172,11 +172,11 @@ Note that the username is the one on our machine, and the key.pem file is the ke
    ```
 * Move to the OpenFaaS_function folder
 * Edit the banana-cloud.yml updating the "<docker_account>" line in the image field with your DockerHub username
+* Login to your docker account in the shell
 * Build the function
   ```sh
     faas-cli build -f banana-cloud.yml
    ```
-* Login to your docker account in the shell
 * Push the builded image to DockerHub
   ```sh
     faas-cli push -f banana-cloud.yml
