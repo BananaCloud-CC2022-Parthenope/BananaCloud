@@ -227,6 +227,7 @@ To check the state of the function we to monitor some metrics using Prometheus a
 
 Now you should be monitoring all the metrics of the running function on the Cluster.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Autoscaling
 
