@@ -225,13 +225,13 @@ To check the state of the function we to monitor some metrics using Prometheus a
 
 * After clicking Loading, in the "faas" field of the next window use the "faas" attribute.
 
-Now you should be monitoring all the metrics of the running function on the Cluster.
+Now you should be monitoring all the metrics of the running function on the Cloud Machine.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Autoscaling
 
-To enable scaling of the feature we used the hpa(horizontal pod autoscaler) scaler, which resides in the Metric Server package of Kubernetes.
+To enable scaling of the feature we used the Horizontal Pod Autoscaler, which resides in the Metric Server package of Kubernetes.
 
 You can find the installation and configuration guide for this autoscaler [here](https://docs.openfaas.com/tutorials/kubernetes-hpa/)
 
