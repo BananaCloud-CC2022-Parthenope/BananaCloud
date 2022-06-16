@@ -163,6 +163,7 @@ Note that the username is the one on our machine, and the key.pem file is the ke
   kubectl port-forward -n openfaas svc/gateway 8080:8080 &
    ```
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Creation and Configuration of the function
 
 * Clone the repository
