@@ -189,7 +189,7 @@ Note that the username is the one on our machine, and the key.pem file is the ke
   ```sh
    export OPENFAAS_URL=http://CLOUD_MACHINE_IP:PORT
    ```
-Now the function is running and you can send the image you want to classify via an HTTP request to http://YOUR_CLUSTER_IP:PORT/function/banana-cloud 
+Now the function is running and you can send the image you want to classify via an HTTP request to http://YOUR_CLOUD_MACHINE_IP:PORT/function/banana-cloud 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
