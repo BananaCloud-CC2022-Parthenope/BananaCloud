@@ -187,7 +187,7 @@ Note that the username is the one on our machine, and the key.pem file is the ke
    ```
 * To make the function accessible 
   ```sh
-   export OPENFAAS_URL=http://YOUR_CLUSTER_IP:PORT
+   export OPENFAAS_URL=http://CLOUD_MACHINE_IP:PORT
    ```
 Now the function is running and you can send the image you want to classify via an HTTP request to http://YOUR_CLUSTER_IP:PORT/function/banana-cloud 
 
@@ -252,7 +252,7 @@ To easily see the responses of the function, we made a simple Flask based web ap
   export FLASK_ENV=deployment
    ```
    
-* In the server.py file of the WebApp don't forget to place "http://YOUR_CLUSTER_IP:PORT/function/banana-cloud" in the url variable
+* In the server.py file of the WebApp don't forget to place "http://CLOUD_MACHINE_IP:PORT/function/banana-cloud" in the url variable
 
 * Run the flask app with
   ```sh
