@@ -146,7 +146,7 @@ Note that the username is the one on our machine, and the key.pem file is the ke
 
 * Check if all went well using the following commands
   ```sh
-  export KUBECONFIG=/home/enzo/kubeconfig
+  export KUBECONFIG=/home/<username>/kubeconfig
   kubectl config set-context linode-openfaas
   kubectl get nodes -o wide
    ```
