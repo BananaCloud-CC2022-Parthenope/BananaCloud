@@ -136,7 +136,7 @@ To make the project work not locally you have to provide the [WebApp](WebApp/ser
 * Use [arkade](https://github.com/alexellis/arkade) to install all the above
 * Set this environment variable, we'll need it for the next commands
   ```sh
-   export IP="YOUR CLUSTER'S PUBLIC IP"
+   export IP="YOUR CLOUD MACHINE'S PUBLIC IP"
    ```
 * using k3sup install k3s on the cluster, using the IP we've set before
   ```sh
