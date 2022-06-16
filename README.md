@@ -231,7 +231,7 @@ Now you should be monitoring all the metrics of the running function on the Clus
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-##Autoscaling
+## Autoscaling
 
 To enable scaling of the feature we used the hpa(horizontal pod autoscaler) scaler, which resides in the Metric Server package of Kubernetes.
 
