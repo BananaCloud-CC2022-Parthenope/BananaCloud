@@ -236,7 +236,7 @@ To enable scaling of the feature we used the Horizontal Pod Autoscaler, which re
 You can find the installation and configuration guide for this autoscaler [here](https://docs.openfaas.com/tutorials/kubernetes-hpa/)
 
 <div align="center">
-    <img src="images/metrics.gif" alt="screen">
+    <img src="images/metrics8.gif" alt="screen">
  </div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
