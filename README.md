@@ -162,7 +162,7 @@ Note that the username is the one on our machine, and the key.pem file is the ke
   ```sh
   kubectl port-forward -n openfaas svc/gateway 8080:8080 &
    ```
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 ### Creation and Configuration of the function
 
 * Clone the repository
@@ -258,6 +258,8 @@ To easily see the responses of the function, we made a simple Flask based web ap
    ```
 * Now you should visit http://localhost:5000 in your browser to load bananas images and send requests to the function !
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -273,7 +275,6 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- LICENSE -->
@@ -292,6 +293,7 @@ Vincenzo Bevilacqua - University of Naples Parthenope - [email](vincenzo.bevilac
 
 Michele Zito - University of Naples Parthenope - [email](michele.zito001@studenti.uniparthenope.it)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
