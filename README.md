@@ -231,6 +231,12 @@ Now you should be monitoring all the metrics of the running function on the Clus
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+##Autoscaling
+
+To enable scaling of the feature we used the hpa(horizontal pod autoscaler) scaler, which resides in the Metric Server package of Kubernetes.
+
+You can find the installation and configuration guide for this autoscaler [here](https://docs.openfaas.com/tutorials/kubernetes-hpa/)
+
 ## Web App
 
 To easily see the responses of the function, we made a simple Flask based web application. To run it go to the WebApp folder in another shell and, after installing [Flask](https://flask.palletsprojects.com/en/2.1.x/installation/) set the following environment variables.
