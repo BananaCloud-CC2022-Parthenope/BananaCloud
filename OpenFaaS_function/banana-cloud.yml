@@ -1,18 +1,18 @@
 version: 1.0
 provider:
   name: openfaas
-  gateway:  http://127.0.0.1:8080
+  gateway: http://127.0.0.1:8080
 functions:
   banana-cloud:
     lang: pydatascience-web
     handler: ./banana-cloud
-    image: <docker_account>/banana-cloud:latest
+    image: back26/banana-cloud:latest
+    requests:
+      cpu: 10m
     environment:
       RAW_BODY: True
       write_timeout: 30s
       read_timeout: 30s
       exec_timeout: 600s
     labels:
-     com.openfaas.scale.min: 1
-     com.openfaas.scale.max: 10
-     com.openfaas.scale.zero: "true"
+      com.openfaas.scale.factor: 0
