@@ -138,7 +138,7 @@ To make the project work not locally you have to provide the [WebApp](WebApp/ser
   ```sh
    export IP="YOUR CLOUD MACHINE'S PUBLIC IP"
    ```
-* using k3sup install k3s on the cluster, using the IP we've set before
+* using k3sup install k3s on the cloud machine, using the IP we've set before
   ```sh
    k3sup install --ip $IP --user ubuntu --ssh-key $HOME/key.pem
    ```
