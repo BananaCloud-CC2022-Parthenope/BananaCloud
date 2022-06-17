@@ -181,7 +181,7 @@ Note that the username is the one on our machine, and the key.pem file is the ke
   ```sh
     faas-cli push -f banana-cloud.yml
    ```
-* Deploy the DockerHub image to the cluster
+* Deploy the DockerHub image to the kubernetes cluster on the cloud machine
   ```sh
    faas-cli deploy -f banana-cloud.yml
    ```
