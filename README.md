@@ -4,7 +4,7 @@
   <a href="https://wfxr.mit-license.org/2017"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg"/></a>
   <a href="https://www.python.org/downloads/release/python-380/"><img src="https://img.shields.io/badge/Python-3.8-007d9c?logo=python"/></a>
   <a href="https://www.openfaas.com"><img src="https://img.shields.io/badge/OpenFaaS-serverless-blue.svg?logo=OpenFaaS&logoColor=37b7ea"></a>
-  <a href="https://www.openfaas.com"><img src="https://img.shields.io/badge/Pytorch-1.10.0-orange?logo=pytorch&logoColor=red"></a>
+  <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/Pytorch-1.10.0-orange?logo=pytorch&logoColor=red"></a>
   <a href="https://docs.docker.com/"><img src="https://img.shields.io/badge/Docker-20.10.16-blue.svg?logo=Docker&logoColor=2496ed"></a>
   <a href="https://https://flask.palletsprojects.com/en/2.1.x/"><img src="https://img.shields.io/badge/Flask-2.1.2-yellow.svg?logo=Flask&logoColor=38a8be"></a>
   <a href="https://kubernetes.io/"><img src="https://img.shields.io/badge/Kubernetes-k3s-blue.svg?logo=Kubernetes"></a>
